@@ -3,6 +3,14 @@
 
 #content {
 
+	@sprites-path: '/assets/images/sprites.png';
+
+	.border-radius( @radius: 5px ) {
+		-webkit-border-radius: @radius;
+		-moz-border-radius: @radius;
+		border-radius: @radius;
+	}
+
 	.title {
 		.strict-box;
 		.default-face;
@@ -13,7 +21,64 @@
 		height: 50px;
 		line-height: 50px;
 		font-size: 18px;
-		background: transparent url( '/assets/images/sprites.png' ) no-repeat scroll -250px 0;
+		background: transparent url( @sprites-path ) no-repeat scroll -250px 0;
+	}
+
+	#form-msgs {
+
+		.strict-box;
+		margin: 28px 0 0 0;
+		padding: 0;
+
+		.toolbar {
+
+			@height: 33px;
+
+			.strict-box;
+			margin: 0;
+			padding: 0 8px 0 0;
+			width: auto;
+			height: @height;
+
+			.toolbar-item {
+
+				.strict-box;
+				float: right;
+				margin: 0 0 0 7px;
+				padding: 0 0 0 7px;
+				width: auto;
+				height: @height;
+				border-style: solid;
+				border-color: #eee;
+				border-width: 0 0 0 1px;
+
+				&:last-child {
+					margin-left: 0;
+					padding-left: 0;
+					border-left-width: 0;
+				}
+
+				input.button {
+					.strict-box;
+					margin: 0;
+					padding: 0;
+					width: @height;
+					height: @height;
+					text-indent: -999px;
+					color: transparent;
+					border: 0 none;
+					background: #cc0000 url( @sprites-path ) no-repeat scroll 100px 100px;
+					.border-radius( 2px );
+				}
+
+				input#form-msgs-remove-do {
+					background-position: -156px -207px;
+				}
+
+			}
+
+		}
+
 	}
 
 }
