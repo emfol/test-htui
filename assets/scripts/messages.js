@@ -2,6 +2,10 @@
 define( [ "jquery" ], function ( $ ) {
 	return function () {
 
+		$( "#menu > ul.items" ).on( "click", "li.link > a", function () {
+			$( this ).toggleClass( "selected" );
+		} )
+
 		$( "body" ).on( "keydown", function ( e ) {
 			var container, overlay;
 			if ( e.keyCode === 65 || e.keyCode === 66 ) {

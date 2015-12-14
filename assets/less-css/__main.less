@@ -102,9 +102,12 @@ body {
 					a {
 
 						.strict-box;
+						width: auto;
+						height: @item-height;
+						line-height: @item-height;
 						color: inherit;
 						text-decoration: none;
-						padding: 0 0 0 59px;
+						padding: 0 15px 0 59px;
 
 						.icon {
 							.strict-box( absolute );
@@ -115,19 +118,41 @@ body {
 							text-indent: -999px;
 							color: transparent;
 							background: transparent url('/assets/images/sprites.png') no-repeat scroll 100px 100px;
+							&::before {
+								.strict-box( absolute );
+								content: "";
+								left: 0;
+								top: 0;
+								width: 6px;
+								height: @item-height;
+								background: transparent none;
+							}
 							&.market { background-position: 5px -154px; }
 							&.products { background-position: 5px -254px; }
 							&.sales { background-position: 5px -204px; }
 							&.orders { background-position: 5px -305px; }
 						}
 
+						&::after {
+							.strict-box( absolute );
+							content: "";
+							right: 0;
+							top: 0;
+							width: 15px;
+							height: @item-height;
+							background: transparent url('/assets/images/sprites.png') no-repeat scroll -20px -354px;
+						}
+
 						&.selected {
+							color: #cc0000;
 							.icon {
+								&::before { background-color: #cc0000;  }
 								&.market { background-position: -44px -154px ; }
 								&.products { background-position: -44px -254px; }
 								&.sales { background-position: -44px -204px; }
-								&.orders { background-position: -44px -305px; }
+								&.orders { background-position: -45px -305px; }
 							}
+							&::after { background-position: -69px -354px; }
 						}
 
 					}

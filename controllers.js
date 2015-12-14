@@ -17,6 +17,7 @@ function messages( req, res ) {
   res.render( "messages", {
 	  title: "Messages",
 	  stylesheet: "messages",
+	  script: "messages",
 	  navigation: globalNavigation
   } );
 }
