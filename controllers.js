@@ -3,9 +3,13 @@
 var globalNavigation = [
 	{ type: "link", title: "Mercado", href: "#", decoration: "market" },
 	{ type: "link", title: "Produtos", href: "#", decoration: "products" },
-	{ type: "link", title: "Vendas", href: "#", decoration: "sales", selected: false },
+	{ type: "link", title: "Vendas", href: "#", decoration: "sales", selected: true },
 	{ type: "link", title: "Compras", href: "#", decoration: "orders" }
 ];
+
+function root( req, res ) {
+	res.redirect( "/messages" );
+}
 
 function home( req, res ) {
 	res.render( "home", {
@@ -23,6 +27,7 @@ function messages( req, res ) {
 }
 
 module.exports = {
+	"/": { "get": root },
 	"/home": { "get": home },
-	"/messages": { "get": messages }
+	"/messages": { "get": messages, "post": messages }
 };

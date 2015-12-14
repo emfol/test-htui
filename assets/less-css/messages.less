@@ -58,6 +58,10 @@
 					border-left-width: 0;
 				}
 
+				input:focus {
+					outline: 0 none;
+				}
+
 				input.button {
 					.strict-box;
 					margin: 0;
@@ -68,11 +72,39 @@
 					color: transparent;
 					border: 0 none;
 					background: #cc0000 url( @sprites-path ) no-repeat scroll 100px 100px;
+					cursor: pointer;
 					.border-radius( 2px );
 				}
 
 				input#form-msgs-remove-do {
 					background-position: -156px -207px;
+				}
+
+				&.search-box {
+
+					padding: 0 28px;
+
+					input#form-msgs-search {
+						.strict-box;
+						.default-face;
+						font-size: 12px;
+						color: #a1a1a1;
+						margin: 0;
+						padding: 0 15px 0 0;
+						width: 160px;
+						height: @height;
+						line-height: @height;
+						text-align: right;
+						background: #f0f0f0 none;
+						border: 0 none;
+						.border-radius( 2px );
+					}
+					input#form-msgs-search-do {
+						position: absolute;
+						right: 0;
+						top: 0;
+						background-position: -108px -208px;
+					}
 				}
 
 			}

@@ -2,10 +2,27 @@
 define( [ "jquery" ], function ( $ ) {
 	return function () {
 
-		$( "#menu > ul.items" ).on( "click", "li.link > a", function () {
-			$( this ).toggleClass( "selected" );
-		} )
+		$( function () {
+			var selCls = "selected",
+			    linksSel = "li.link > a",
+				menu = $( "#menu > ul.items" ),
+				links = menu.find( linksSel ),
+				current = links.filter( "." + selCls );
+			menu.on( "mouseover mouseout", linksSel, function ( e ) {
+				links.removeClass( selCls );
+				if ( e.type === "mouseover" ) {
+					$( this ).addClass( selCls );
+				} else if ( current.length === 1 ) {
+					current.addClass( selCls );
+				}
+			} );
+		} );
 
+		/*
+		 * DEBUG ONLY
+		 * Press "A" to see PNG layout
+		 * Press "B" to see HTML version
+		 */
 		$( "body" ).on( "keydown", function ( e ) {
 			var container, overlay;
 			if ( e.keyCode === 65 || e.keyCode === 66 ) {
