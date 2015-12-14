@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<meta charset="utf-8" />
+
+		{{!-- Title --}}
+
+		{{#if title}}
+		<title>Hotmart | {{title}}</title>
+		{{else}}
+		<title>Hotmart</title>
+		{{/if}}
+
+		{{!-- Styles --}}
+
+		{{#if stylesheet}}
+		<link rel="stylesheet" href="/assets/styles/{{stylesheet}}.css" />
+		{{else}}
+		<link rel="stylesheet" href="/assets/styles/default.css" />
+		{{/if}}
+
+		<script data-main="/assets/scripts/main" src="/assets/scripts/vendor/requirejs/require.js"></script>
+
+	</head>
+
+	<body data-script="{{script}}">
+
+		<div id="container">
+
+			<nav id="menu" role="navigation">
+				<h1 class="logo"><a class="link" href="https://www.hotmart.com/">Hotmart</a></h1>
+				<ul class="items">
+				{{#each navigation}}
+				<li class="{{type}}">
+					<a href="{{href}}" class="{{#if selected}}selected{{/if}}">
+						<span class="icon{{#if decoration}} {{decoration}}{{/if}}">@</span>
+						{{title}}
+					</a>
+				</li>
+				{{/each}}
+				</ul>
+			</nav>
+
+			<section id="content" role="main">
+				{{{body}}}
+			</section>
+
+		</div>
+
+	</body>
+
+</html>

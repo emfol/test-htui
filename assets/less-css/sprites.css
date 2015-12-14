@@ -1,0 +1,118 @@
+.nav-logo, .nav-orders, .nav-products, .nav-products-sel, .nav-sales, .nav-sales-sel, .nav-market, .nav-market-sel, .nav-orders-sel, .icon-messages, .nav-arrow, .nav-arrow-sel, .arrow-right, .arrow-left, .bt-remove, .btn-search, .message-arrow, .message-arrow-sel, .nav-cross{
+	background: url(sprites.png) no-repeat;
+}
+
+.nav-logo{
+	background-position: 0 0;
+	width: 219px;
+	height: 135px;
+}
+
+.nav-orders{
+	background-position: -12px -314px ;
+	width: 25px;
+	height: 21px;
+}
+
+.nav-products{
+	background-position: -16px -264px ;
+	width: 18px;
+	height: 21px;
+}
+
+.nav-products-sel{
+	background-position: -65px -264px ;
+	width: 18px;
+	height: 21px;
+}
+
+.nav-sales{
+	background-position: -20px -216px ;
+	width: 10px;
+	height: 17px;
+}
+
+.nav-sales-sel{
+	background-position: -69px -216px ;
+	width: 10px;
+	height: 17px;
+}
+
+.nav-market{
+	background-position: -16px -167px ;
+	width: 17px;
+	height: 16px;
+}
+
+.nav-market-sel{
+	background-position: -65px -167px ;
+	width: 17px;
+	height: 16px;
+}
+
+.nav-orders-sel{
+	background-position: -62px -314px ;
+	width: 25px;
+	height: 21px;
+}
+
+.icon-messages{
+	background-position: -250px 0;
+	width: 50px;
+	height: 50px;
+}
+
+.nav-arrow{
+	background-position: -23px -370px ;
+	width: 5px;
+	height: 9px;
+}
+
+.nav-arrow-sel{
+	background-position: -72px -370px ;
+	width: 5px;
+	height: 9px;
+}
+
+.arrow-right{
+	background-position: -171px -167px ;
+	width: 8px;
+	height: 14px;
+}
+
+.arrow-left{
+	background-position: -120px -167px ;
+	width: 8px;
+	height: 14px;
+}
+
+.bt-remove{
+	background-position: -168px -216px ;
+	width: 10px;
+	height: 16px;
+}
+
+.btn-search{
+	background-position: -115px -216px ;
+	width: 20px;
+	height: 17px;
+}
+
+.message-arrow{
+	background-position: -120px -268px ;
+	width: 8px;
+	height: 14px;
+}
+
+.message-arrow-sel{
+	background-position: -171px -268px ;
+	width: 8px;
+	height: 14px;
+}
+
+.nav-cross{
+	background-position: -116px -315px ;
+	width: 18px;
+	height: 18px;
+}
+

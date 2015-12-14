@@ -1,0 +1,26 @@
+{
+  "name": "hotmart-test",
+  "description": "Hotmart Frontent Test",
+  "main": "app.js",
+  "authors": [
+    "Emanuel F. Oliveira"
+  ],
+  "license": "ISC",
+  "moduleType": [
+    "amd"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/scripts/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "~2.1.22",
+    "jquery": "~2.1.4"
+  }
+}
