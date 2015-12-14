@@ -18,12 +18,23 @@ function home( req, res ) {
 }
 
 function messages( req, res ) {
-  res.render( "messages", {
-	  title: "Messages",
-	  stylesheet: "messages",
-	  script: "messages",
-	  navigation: globalNavigation
-  } );
+
+	var messages = [
+		{ author: "Rodrigo", title: "Message 1..." },
+		{ author: "Claudio", title: "Message 2..." },
+		{ author: "Bernardo", title: "Message 3..." },
+		{ author: "Josiane", title: "Message 4..." },
+		{ author: "Emanuel", title: "Message 5..." },
+		{ author: "Izabela", title: "Message 6..." }
+	];
+
+	res.render( "messages", {
+		title: "Messages",
+		stylesheet: "messages",
+		script: "messages",
+		messages: messages,
+		navigation: globalNavigation
+	} );
 }
 
 module.exports = {

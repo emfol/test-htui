@@ -1,6 +1,7 @@
 <h1 class="title">Mensagens</h1>
 
 <form name="form-msgs" id="form-msgs" action="action" method="post">
+
 	<div class="toolbar">
 		<div class="toolbar-item">
 			<input type="button" class="button" name="form-msgs-remove-do" id="form-msgs-remove-do" value="remove" />
@@ -10,4 +11,11 @@
 			<input type="button" class="button" name="form-msgs-search-do" id="form-msgs-search-do" value="search" />
 		</div>
 	</div>
+
+	<div class="message-container">
+		{{#each messages}}
+		<div class="message-box">{{author}} | {{title}}</div>
+		{{/each}}
+	</div>
+
 </form>

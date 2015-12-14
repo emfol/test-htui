@@ -82,12 +82,13 @@
 
 				&.search-box {
 
-					padding: 0 28px;
+					padding-right: 28px;
 
 					input#form-msgs-search {
 						.strict-box;
 						.default-face;
-						font-size: 12px;
+						font-size: 11px;
+						letter-spacing: .05em;
 						color: #a1a1a1;
 						margin: 0;
 						padding: 0 15px 0 0;
@@ -107,6 +108,34 @@
 					}
 				}
 
+			}
+
+		}
+
+		.message-container {
+
+			@height: 102px;
+
+			.strict-box;
+			margin: 23px 0 45px 0;
+			padding: 0;
+			width: auto;
+			height: auto;
+			border: 1px solid @default-border-color;
+
+			.message-box {
+				.strict-box;
+				margin: 0;
+				padding: 0 25px 0 120px;
+				width: auto;
+				height: @height;
+				line-height: @height;
+				border-style: solid;
+				border-color: @default-border-color;
+				border-width: 1px 0 0 0;
+				&:first-child {
+					border-top-width: 0;
+				}
 			}
 
 		}
