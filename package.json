@@ -2,17 +2,21 @@
   "name": "hotmart-test",
   "version": "1.0.0",
   "description": "Hotmart Frontent Test",
-  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/emfol/test-htui.git"
+  },
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "bower install"
   },
   "author": "Emanuel F. Oliveira",
   "license": "ISC",
   "dependencies": {
+    "bower": "^1.7.1",
     "express": "^4.13.3",
     "express-handlebars": "^2.0.1",
-    "express-less": "0.0.8",
-    "gulp": "^3.9.0",
-    "gulp-bower": "0.0.11"
+    "express-less": "0.0.8"
   }
 }

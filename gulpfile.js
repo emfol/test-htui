@@ -1,11 +1,6 @@
 
-var gulp = require( "gulp" ),
-	bower = require( "gulp-bower" );
+var gulp = require( "gulp" );
 
 gulp.task( "default", function () {
-	console.log( "Oops! Nothing here..." );
-} );
-
-gulp.task( "bower", function () {
-  return bower();
+	console.log( "Oops! Nothing here yet..." );
 } );

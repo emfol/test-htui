@@ -1,7 +1,7 @@
 {
   "name": "hotmart-test",
   "description": "Hotmart Frontent Test",
-  "main": "app.js",
+  "main": "server.js",
   "authors": [
     "Emanuel F. Oliveira"
   ],
